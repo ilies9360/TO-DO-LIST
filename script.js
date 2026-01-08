@@ -29,13 +29,13 @@ function afficherTasks() {
 
     for (var i = 0; i < tasks.length; i++) {
 
-        var task = tasks[i];
-        var index = i;
+        let  task = tasks[i];
+        let index = i;
 
-        var div = document.createElement("div");
+        let div = document.createElement("div");
         div.className = "task";
 
-        if (task.completed) {
+        if (tasks[index].completed) {
             div.className = "task completed";
         }
 
@@ -48,8 +48,8 @@ function afficherTasks() {
             "<input type='checkbox'> Complétée <br>" +
             "<button>Supprimer</button>";
 
-        var checkbox = div.getElementsByTagName("input")[0];
-        checkbox.checked = task.completed;
+        let checkbox = div.getElementsByTagName("input")[0];
+        checkbox.checked = tasks[index].completed;
 
         checkbox.addEventListener("change", function () {
             task.completed = this.checked;
@@ -57,7 +57,7 @@ function afficherTasks() {
             afficherTasks();
         });
 
-        var bouton = div.getElementsByTagName("button")[0];
+        let bouton = div.getElementsByTagName("button")[0];
         bouton.addEventListener("click", function () {
             tasks.splice(index, 1);
             localStorage.setItem("tasks", JSON.stringify(tasks));
