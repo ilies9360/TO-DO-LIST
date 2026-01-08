@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #eef1f5;
+    padding: 30px;
+    color: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccd3db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    background: #4a90e2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #357ab8;
+}
+
+
+#taskList {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.task {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    border-left: 5px solid #4a90e2;
+    transition: transform 0.2s ease;
+}
+
+.task:hover {
+    transform: translateY(-3px);
+}
+
+.task.completed {
+    background: #f0f4f8;
+    border-left-color: #2ecc71;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.task h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.task h4 {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.task p {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.task button {
+    background: #e74c3c;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.task button:hover {
+    background: #c0392b;
+}

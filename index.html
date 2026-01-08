@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionnaires de tâches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Gestionnaires de tâches</h1>
+
+<form id="taskForm">
+    <input type="text" id="titre" placeholder="Titre (requis)" required>
+    <input type="text" id="sousTitre" placeholder="Sous-titre (requis)" required>
+    <textarea id="message" placeholder="Message" ></textarea>
+    <input type="email" id="email" placeholder="Email (requis)" required>
+    <input type="date" id="date" required>
+    <button type="submit">Ajouter</button>
+</form>
+
+<div id="taskList"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
